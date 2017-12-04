@@ -42,8 +42,8 @@ The dock has 8 available ports which are in an array.  Each port has one LED Lig
 
 ### Instance Functions
   -  **plug(dvc)**: will add a device to the ports array.
-      -  You will search the dock for the first non-red led.  Insert the device at this index in the ports array.
-      -  Based on the amount of power juice/capacity, if this is less than 0.99 make the led color yellow at this index, otherwise it is greater than or equal to 0.99 so make the led color green.
+      -  You will loop through the port array for the first **non-red** led.  Insert the device at this index in the ports array.
+      -  Based on the amount of power juice, if this is less than 0.99 make the led color yellow at this index, otherwise it is greater than or equal to 0.99 so make the led color green.
   -  **unplug(dvcIdx)** will remove a device based on its index.  If the leds-array is yellow or green at this index (dvcIdx)
       -  store the device at the current port in a variable named temp.
       -  set the current port to undefined.
