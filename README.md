@@ -17,7 +17,7 @@ Each device holds a lot of information which is important to its function.
       -  active: 23% of capacity
 
 ### Instance Functions
-  -  **power()**:  This function returns the value of the device's juice divided by the device's capacity.  This represent the percent of charge of the device.
+  -  **power()**:  This function returns the value of the device's juice.  This represent the percent of charge of the device.
   -  **off()**:  This function changes the state to the string off.
   -  **on()**:  This function checks the state of the phone using conditional statements
       -  if the phone is off, then change the state to idle.
