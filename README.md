@@ -24,6 +24,10 @@ Each device holds a lot of information which is important to its function.
       -  if the phone is idle, then change the state to active.
   -  **wake()**:  This function checks the state of the phone to see if it is not off.  If this is true, then change the phones state to active.
   -  **sleep()**:  This function checks to see if the state of the phone is active.  If this is true, then change the state of the phone to idle.
+  -  **use(min)**:  This function checks to see which state it is in with conditional statements.  For each state, drain the value of juice by the proper amount of the rate.
+      -  if your device is **off** and min were 600 (aka 10 hours), juice would loose 1.5%
+      -  if your device is **idle** and min were 600 (aka 10 hours), juice would loose 23.5%
+      -  if your device is **active** and min were 240 (aka 4 hours), juice would loose 96%
   -  **charge(min)**:  This function will take an input min, which will be the number of minutes your device will charge.  You will add milliAmps to your juice for each fraction of an hour your device charges.  Keep in mind that if your juice goes over capacity, you should reset it to capacity using a conditional statement.
       -  if your device is **off**, add the milliAmps to the juice as stated above.
       -  if your device is **idle**, multiply your milliAmps by 0.9765 before adding to juice.
