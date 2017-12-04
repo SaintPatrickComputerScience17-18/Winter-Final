@@ -4,6 +4,11 @@ function Device(t,ma,c){
 
     //Instance Variables
     this.type = t;
+    this.
+    this.
+    this.
+    this.
+    this.rate = [0.0015,0.0235,0.23];
 
     //Instance Functions
     this.on = function(){
@@ -15,7 +20,21 @@ function Device(t,ma,c){
         }
     };
     
-    
+    this.charge = function(min){
+        //adds more electricity to the device's juice depending on its state
+        if(this.state == "off"){
+            let charge = (this.millAmps / this.capacity);
+            let output = 1 - this.rate[0];
+            let time = min / 60;
+            this.juice = this.juice + charge*output*time;
+        }
+        else if(){}
+        else if(){}
+        
+        //resets juice to 1 if it has exceeded 1
+        if(){}
+        
+    };
 
 }//end of the device declaration
 
