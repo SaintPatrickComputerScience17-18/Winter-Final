@@ -10,6 +10,9 @@ function Device(t,ma,c){
         if(this.state == "off" && this.juice >0){
            this.state = "idle";
         }
+        else if (/*complete*/){
+           //complete from instructions      
+        }
     };
     
     
